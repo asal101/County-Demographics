@@ -17,15 +17,30 @@ app = Flask(__name__)
 <p>The select element is used to create a drop-down list.</p>
 
 <form action="/action_page.php">
-  <label for="states">Choose a state:</label>
-  <select name="states" id="states">
-  {{options}}
+  <label for="state">Choose a state:</label>
+  <select name="state" id="state">
+    <option value="">Alabama</option>
+    <option value="saab">Alaska</option>
+    <option value="opel">Arizona</option>
+    <option value="audi">Arkansas</option>
+    <option value="audi">California</option>
+    <option value="audi">Colorado</option>
+    <option value="audi">Connecticut</option>
   </select>
   <br><br>
   <input type="submit" value="Submit">
 </form>
 
-<p>Click the "Submit" button.</p>
+<p>Click the "Submit" button and the form-data will be sent to a page on the 
+server called "action_page.php".</p>
+
+
+<p>Click the "Submit" button and the form-data will be sent to a page on the 
+server called "action_page.php".</p>
+
+
+    
+    
     </form>
   </body>
 </html>
