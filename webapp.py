@@ -8,7 +8,7 @@ get_state_options
   
 "empty_list": ""
     
-   Markup("<empty_list=\"" + s + "\">" + s + "</empty_list>")
+Markup("<empty_list=\"" + s + "\">" + s + "</empty_list>")
   
   
 options = options + Markup("<empty_list=\"" + s + "\get_state_options">" + s + "</empty_list>")
