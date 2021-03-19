@@ -3,14 +3,10 @@ import os
 import json
 app = Flask(__name__)
 
-get_state_options  
-"empty_list": ""   
-Markup("<empty_list=\"" + s + "\">" + s + "</empty_list>") 
-options = options + Markup("<empty_list=\"" + s + "\get_state_options">" + s + "</empty_list>")
 @app.route("/")
 def render_main():
     return render_template('home.html')
-
+                           
 @app.route("/response")
 def render_response():
     color = request.args['color'] 
