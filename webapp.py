@@ -24,6 +24,8 @@ if __name__=="__main__":
 
    
   def get_state_options():
+    with open('county_demographics.json') as demographics_data:
+        counties = json.load(demographics_data)    
         
       ListOfStates=[]
         options = options + [0] "State"
