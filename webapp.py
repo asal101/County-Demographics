@@ -21,20 +21,10 @@ def render_response():
     
 if __name__=="__main__":
     app.run(debug=False, port=54321)
-
-   
     get_state_options:
-        
       ListOfStates:
         options = options + [0] "State"
         for state in states:
         if state["State"]  < first_state:
             first_state = state ["State"]
        return first_state     
-       
-        
-    
-    
-    
-    
-    
