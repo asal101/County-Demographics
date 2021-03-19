@@ -33,19 +33,3 @@ if __name__=="__main__":
        return first_state     
 
 Markup("<State=\"" + s + "\">" + s + "</State>")
-
-
-
-
-
-
-
-
-
-       
-        
-    
-    
-    
-    
-    
