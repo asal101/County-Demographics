@@ -9,12 +9,12 @@ def render_main():
                            
 @app.route("/response")
 def render_response():
-    #color = request.args['color'] 
+    color = request.args['color'] 
     
-   # if color == 'pink':
+    if color == 'pink':
         reply = "That's my favorite color, too!"
-  #  else:
-   #     reply = "My favorite color is pink."
+    else:
+        reply = "My favorite color is pink."
     return render_template('response.html', response = reply)
     
 if __name__=="__main__":
