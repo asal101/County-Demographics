@@ -5,23 +5,24 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('home.html', options=get_state_options())
 
+@app.route('/funFact')
 def render_fun_fact():
     state_chosen = request.args['states']
     return render_template('home.html', options=get_state_options(), funFact=fun_fact_by_state(state_chosen))
     
                            
 def get_state_options():
-    ListOfStates = []
-    with open('county_demographics.json') as demographics_data:
+    listOfStates = []
+    with open('demographics.json') as demographics_data:
          counties = json.load(demographics_data)
             for county in counties:
-                if not (county["State"] in ListOfStates):
-                    ListOfStates.append(county["State"])
+                if not (county["State"] in listOfStates):
+                    listOfStates.append(county["State"])
                     
             options = ""
-         for state in ListOfStates:
+         for state in listOfStates:
             options = options + Markup("<option value=\"" + s + "\">" + s + "</option>")
         return options
     
