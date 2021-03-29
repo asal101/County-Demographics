@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def render_main():
-    return render_template('home.html')
+    return render_template('home.html', options=get_state_options())
                            
 @app.route("/response")
 def render_response():
