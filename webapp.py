@@ -3,9 +3,13 @@ import os
 import json
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def home():
     return render_template('home.html')
+
+@app.route('/funFact')
+def render_fun_facy
+    return render_template('home.html', options=get_state_options(), funFact=fun_fact_by_state(state_chosen)
                            
 def get_state_options():
     ListOfStates = []
