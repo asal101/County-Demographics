@@ -11,7 +11,7 @@ def get_state_options():
     ListOfStates = []
     with open('county_demographics.json') as demographics_data:
          counties = json.load(demographics_data)
-            for county in counties:
+         for county in counties:
                 if not (county["State"] in ListOfStates):
                     ListOfStates.append(county["State"])
                     
@@ -20,7 +20,14 @@ def get_state_options():
             options = options + Markup("<option value=\"" + s + "\">" + s + "</option>")
         return options
     
-    
+def fun_fact_by_state(state):
+    first_county = "ZZZZZZZZ"
+    for county in counties:
+        if county["County"] < first_county and county["State"] == state:
+            first_county = county["County"]
+    return first_county
+
+
     if __name__ == '__main__':
         
         app.run(debug=True)
