@@ -24,10 +24,3 @@ def get_state_options():
     if __name__ == '__main__':
         
         app.run(debug=True)
-    
-    
-    
-    
-    
-    
-  
