@@ -5,8 +5,10 @@
   </head>
   <body>
 
-    <form action='/response'>
-      Pick a state to get a fun fact!<br>
+    <form action='/funFact'>
+      <label for="states">Pick a state:</label>
+      <select name="states" id ="states">
+        {{options}}
       <input type="radio">
       <br><br>
       <input type="submit">
