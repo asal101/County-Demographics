@@ -19,8 +19,8 @@ def render_response():
         reply = "My favorite color is pink."
     return render_template('response.html', response = reply)
     
-if __name__=="__main__":
-    app.run(debug=False, port=54321)
+if __name__=='__main__':
+    app.run(debug=False)
 
    
   def get_state_options():
