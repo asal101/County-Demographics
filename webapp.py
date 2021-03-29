@@ -34,11 +34,11 @@ def render_response():
         if not (county["State"]) in listOfStates):
             listOfStates.append(county["State"])
             first_state = state ["State"]
-
+    options = ""
+    for state in listOfStates:
+        options = options + Markup("<option value=\"" + state + "\">" + state + "</State>")
+    return options
         
-Markup("<State=\"" + s + "\">" + s + "</State>")
-
-
 if __name__=='__main__':
     app.run(debug=False)
     
